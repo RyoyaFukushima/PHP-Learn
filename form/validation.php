@@ -1,5 +1,5 @@
 <?php
-
+// 関数で分けた方がいいのかもしれない ex: vali_name(), vali_email()
 function validation($request){
     $errors = [];
 
