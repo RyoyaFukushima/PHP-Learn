@@ -200,7 +200,9 @@ switch($_POST['age']){
 <?php endif; ?>
 <!-- 完了画面 -->  
 <?php  if($pageFlag === 2) :?>
-<?php  if($_POST['csrf'] === $_SESSION['csrfToken']) :?>    
+<?php  if($_POST['csrf'] === $_SESSION['csrfToken']) :?>
+<?php require '../mainte/insert.php'; 
+    insertContact($_POST); ?>
     送信が完了しました。    
 <?php unset($_SESSION['csrfToken']); ?>  <!--sessionの放棄-->  
 <?php endif; ?>
